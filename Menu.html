@@ -32,52 +32,70 @@
     </div>
 
     <div class="menu-category-cta-contain">
-        <div class="menu-category-cta">
-            <a href="" title="Sushi">
+        <div class="menu-category-cta" >
+            <li id="sushi">
             <img src="./Source/image/menu/Suchi.png" alt="Sushi" title="Sushi">
-            <span>Sushi</span></a>
+            <span>Sushi</span></li>
         </div>
 
         <div class="menu-category-cta">
-            <a href="" title="Sides">
-            <img src="./Source/image/menu/Sides.png" alt="Sides" title="Sides">
-                <span>Sides</span></a>
+            <li id="sides" >
+            <img src="./Source/image/menu/Sides.png" >
+                <span>Sides</span></li>
         </div>
 
         <div class="menu-category-cta">
-            <a href=""  title="Soup & Noodles">
-            <img src="./Source/image/menu/Soup & Noodles.png" alt="Soup & Noodles" title="Soup & Noodles">
-            <span>Soup & Noodles</span></a>
+            <li id="soup">
+            <img src="./Source/image/menu/Soup & Noodles.png" >
+            <span>Soup & Noodles</span></li>
         </div>
 
         <div class="menu-category-cta">
-            <a href=""  title="Desserts">
-            <img src="./Source/image/menu/Desserts.png" alt="Desserts" title="Desserts">
-            <span>Desserts</span></a>
+            <li  id="desserts" >
+            <img src="./Source/image/menu/Desserts.png" >
+            <span>Desserts</span></li>
         </div>
+        <button class="seeAll">See Full Menu</button>
     
     </div>
 
 
      <!-- multiple type of sushi -->
+    <div class="Category-of-food">
+        <h2 style="color:white">MENU</h2>
+        <hr>
+    </div>
+
 
      <!-- NIGIRI -->
 
-    <div class="Category-of-food">
-        <h2 style="color:white">Sushi</h2>
-        <hr>
-    </div>
-    
-    <div class="type-of-food">
+    <div class="type-of-food nigiri1">
         <h3>NIGIRI</h3>
         <hr>
     </div>
 
-    <div class="food">
+    <div class="food nigiri">
         
-        <div class="box">
+        <div class="box all nigiri" >
             <div class="food-image">
-            <img src="./Source/image/menu-items/1.png" alt="">
+                <img src="./Source/image/menu-items/1.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
+            </div>
+
+            <div class="food-name">
+                <h3 style="color:white ;">Aburi Eel with Miso Cream Cheese</h3>
+                <section style="color:white ;"> $3.45</section>
+            </div>
+          
+
+        </div>
+
+        <div class="box all nigiri" >
+            <div class="food-image">
+                <img src="./Source/image/menu-items/2.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -87,9 +105,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all nigiri" >
             <div class="food-image">
-            <img src="./Source/image/menu-items/2.png" alt="">
+                <img src="./Source/image/menu-items/3.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -99,9 +119,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all nigiri" >
             <div class="food-image">
-            <img src="./Source/image/menu-items/3.png" alt="">
+                <img src="./Source/image/menu-items/4.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -111,9 +133,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all nigiri" >
             <div class="food-image">
-            <img src="./Source/image/menu-items/4.png" alt="">
+                <img src="./Source/image/menu-items/5.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -123,9 +147,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all nigiri" >
             <div class="food-image">
-            <img src="./Source/image/menu-items/1.png" alt="">
+                <img src="./Source/image/menu-items/6.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -135,9 +161,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all nigiri" >
             <div class="food-image">
-            <img src="./Source/image/menu-items/2.png" alt="">
+                <img src="./Source/image/menu-items/7.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -147,21 +175,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all sushi" >
             <div class="food-image">
-            <img src="./Source/image/menu-items/3.png" alt="">
-            </div>
-
-            <div class="food-name">
-                <h3 style="color:white ;">Aburi Eel with Miso Cream Cheese</h3>
-                <section style="color:white ;"> $3.45</section>
-            </div>
-
-        </div>
-
-        <div class="box">
-            <div class="food-image">
-            <img src="./Source/image/menu-items/4.png" alt="">
+                <img src="./Source/image/menu-items/8.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -172,24 +190,24 @@
         </div>
 
     </div>
-
 
 
     <!-- ROllS -->
 
- 
-        <div class="type-of-food">
+        <div class="type-of-food rolls1">
             <h3>ROLLS</h3>
             <hr>
         </div>
 
-    <div class="food">
+    <div class="food rolls">
 
        
 
-        <div class="box">
+        <div class="box all sides">
             <div class="food-image">
-            <img src="./Source/image/menu-items/1.png" alt="">
+                <img src="./Source/image/menu-items/9.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -199,9 +217,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all sides">
             <div class="food-image">
-            <img src="./Source/image/menu-items/2.png" alt="">
+                <img src="./Source/image/menu-items/10.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -211,9 +231,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all sides">
             <div class="food-image">
-            <img src="./Source/image/menu-items/3.png" alt="">
+                <img src="./Source/image/menu-items/11.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -223,9 +245,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all sides">
             <div class="food-image">
-            <img src="./Source/image/menu-items/4.png" alt="">
+                <img src="./Source/image/menu-items/12.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -235,9 +259,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all sides">
             <div class="food-image">
-            <img src="./Source/image/menu-items/1.png" alt="">
+                <img src="./Source/image/menu-items/13.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -247,9 +273,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all sides">
             <div class="food-image">
-            <img src="./Source/image/menu-items/2.png" alt="">
+                <img src="./Source/image/menu-items/14.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -259,9 +287,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all sides">
             <div class="food-image">
-            <img src="./Source/image/menu-items/3.png" alt="">
+                <img src="./Source/image/menu-items/15.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -271,9 +301,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all sides">
             <div class="food-image">
-            <img src="./Source/image/menu-items/4.png" alt="">
+                <img src="./Source/image/menu-items/16.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -284,23 +316,22 @@
         </div>
 
     </div>
-
 
 
     <!-- HAND ROLL -SEAWEED -->
 
-  
-    
-    <div class="type-of-food">
+    <div class="type-of-food hand-roll-seaweed1">
         <h3>HAND ROLL-SEAWEED</h3>
         <hr>
     </div>
 
-    <div class="food">
+    <div class="food hand-roll-seaweed" >
         
-        <div class="box">
+        <div class="box all soup">
             <div class="food-image">
-            <img src="./Source/image/menu-items/1.png" alt="">
+                <img src="./Source/image/menu-items/17.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -310,9 +341,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all soup">
             <div class="food-image">
-            <img src="./Source/image/menu-items/2.png" alt="">
+                <img src="./Source/image/menu-items/18.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -322,9 +355,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all soup">
             <div class="food-image">
-            <img src="./Source/image/menu-items/3.png" alt="">
+                <img src="./Source/image/menu-items/19.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -334,9 +369,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all soup">
             <div class="food-image">
-            <img src="./Source/image/menu-items/4.png" alt="">
+                <img src="./Source/image/menu-items/20.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -346,9 +383,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all soup">
             <div class="food-image">
-            <img src="./Source/image/menu-items/1.png" alt="">
+                <img src="./Source/image/menu-items/21.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -358,9 +397,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all soup">
             <div class="food-image">
-            <img src="./Source/image/menu-items/2.png" alt="">
+                <img src="./Source/image/menu-items/22.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -370,9 +411,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all soup">
             <div class="food-image">
-            <img src="./Source/image/menu-items/3.png" alt="">
+                <img src="./Source/image/menu-items/23.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -382,9 +425,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all soup">
             <div class="food-image">
-            <img src="./Source/image/menu-items/4.png" alt="">
+                <img src="./Source/image/menu-items/24.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -397,22 +442,22 @@
     </div>
 
 
-
     <!-- HAND ROLL -SOY PAPER -->
 
- 
-        <div class="type-of-food">
+        <div class="type-of-food hand-roll-soy-paper1">
             <h3>HAND ROLL-SOY PAPER</h3>
             <hr>
         </div>
 
-    <div class="food">
+    <div class="food hand-roll-soy-paper">      
 
        
 
-        <div class="box">
+        <div class="box all desserts">
             <div class="food-image">
-            <img src="./Source/image/menu-items/1.png" alt="">
+                <img src="./Source/image/menu-items/25.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -422,9 +467,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all desserts">
             <div class="food-image">
-            <img src="./Source/image/menu-items/2.png" alt="">
+                <img src="./Source/image/menu-items/26.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -434,9 +481,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all desserts">
             <div class="food-image">
-            <img src="./Source/image/menu-items/3.png" alt="">
+                <img src="./Source/image/menu-items/27.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -446,9 +495,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all desserts">
             <div class="food-image">
-            <img src="./Source/image/menu-items/4.png" alt="">
+                <img src="./Source/image/menu-items/28.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -458,9 +509,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all desserts">
             <div class="food-image">
-            <img src="./Source/image/menu-items/1.png" alt="">
+                <img src="./Source/image/menu-items/29.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -470,9 +523,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all desserts">
             <div class="food-image">
-            <img src="./Source/image/menu-items/2.png" alt="">
+                <img src="./Source/image/menu-items/30.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -482,9 +537,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all desserts">
             <div class="food-image">
-            <img src="./Source/image/menu-items/3.png" alt="">
+                <img src="./Source/image/menu-items/31.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -494,9 +551,11 @@
 
         </div>
 
-        <div class="box">
+        <div class="box all desserts">
             <div class="food-image">
-            <img src="./Source/image/menu-items/4.png" alt="">
+                <img src="./Source/image/menu-items/32.png" alt="">
+                <a class="cart cart1" href="">Add To Cart</a>
+                <input type="hidden" value="15" />
             </div>
 
             <div class="food-name">
@@ -511,8 +570,8 @@
         
     
 
+    
 
-
-
+    <script src="main.js"></script>
 </body>  
 </html>  
