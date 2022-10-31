@@ -34,6 +34,10 @@ body {
   float:right;
   list-style: none;
 }
+/* .navbar-items span{
+  color:white;
+  padding-left: 10px;
+} */
 
 .navbar-items a {
         
@@ -428,33 +432,77 @@ body {
    }
 
    .cart {
-    color: ;
+    color:black;
     position: absolute;
     display: flex;
     background-color: darkgrey;
     transition: all 0.3s ease-in-out;
     opacity: 0;
     cursor: pointer;
-    text-align: center;
+    justify-content: center;
     width: 100%;
     transform: translateY(-110%);
     
 }
 
-.cart a{
-  color: #000;
-  text-decoration: none;
-
-}
-
-
-   .box:hover .cart1 {
+   .food-container:hover .cart1 {
     /* bottom: 50px; */
     opacity: 1;
     padding: 10px;
     text-decoration: none;
 }
   
+
+
+/* ************************contact container******************** */
+.contact-container{
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.formulaire{
+ align-items: center;
+  
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.formulaire ::placeholder{
+  padding-left: 10px;
+}
+.formulaire p{
+  margin: 5px 0;
+  text-align: left;
+}
+.formulaire input ,.formulaire textarea,.formulaire button{
+  width: 60%;
+  margin-top: 12px;
+  background-color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+.formulaire button{
+  color: white;
+  background-color: #DB545A;
+  padding: 5px 0;
+  border: none;
+  border-radius: 10px;
+}
+.map{
+  text-align: center;
+  width: 50%;
+  margin-top: 20px;
+  margin-bottom: 9.55%;
+}
+.map p,.map h4{
+  padding-top:10px ;
+  color: white;
+}
+.map span{
+  color: white;
+}
   
   
   

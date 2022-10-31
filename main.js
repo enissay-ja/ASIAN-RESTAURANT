@@ -1,4 +1,5 @@
 
+
 let sushiClass1 = document.querySelector('.nigiri1');
 let sidesClass1 = document.querySelector('.rolls1');
 let soupClass1 = document.querySelector('.hand-roll-seaweed1');
@@ -8,7 +9,9 @@ let sushiClass = document.querySelector('.nigiri');
 let sidesClass = document.querySelector('.rolls');
 let soupClass = document.querySelector('.hand-roll-seaweed');
 let dessertsClass = document.querySelector('.hand-roll-soy-paper');
-let seeAllClass = document.querySelector('.seeAll');
+var seeAllClass = document.querySelector('.seeAll');
+
+
 
 
 seeAllClass.addEventListener('click',function(){
@@ -73,5 +76,48 @@ desserts.addEventListener('click',function(){
     dessertsClass.style.display="flex";
 })
 
+
+
+
+const addtocart = document.querySelectorAll('.cart');
+var i=0;
+let table = [];
+addtocart.forEach((elm)=>{
+    elm.addEventListener('click',()=>{
+        var Title ,Price ,Image;
+        const div = elm.parentElement.parentElement;
+        const titre = div.querySelector('h3').innerHTML;
+        const prix =  div.querySelector('section').innerHTML;
+        const imgsrc = div.querySelector('img').currentSrc;
+        const imgsrcfinal = imgsrc.replace("http://127.0.0.1:5500",".")
+
+        let itemsList = {
+            Title: titre,
+            Price: prix,
+            Image: imgsrcfinal,
+        }
+
+
+        // if (localStorage.getItem('itemsList'==null){
+        //     localStorage.setItem('itemsList', '[]');
+        // }
+
+
+
+        table.push(itemsList)
+        localStorage.setItem("itemsList", JSON.stringify(itemsList));
+
+        console.log(table);
+        // localStorage.setItem("title", titre);
+        // localStorage.setItem("price", prix);
+        // localStorage.setItem("imgsrcfinal",imgsrcfinal);
+
+        
+        // add_product();
+        
+        
+
+    })
+})
 
 
