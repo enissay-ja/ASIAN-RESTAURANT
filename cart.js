@@ -15,7 +15,7 @@ for( var i=0;i<table.length;i++){
                 <div class="product">
 
                     <div class="product-image">
-                        <img src="${table[i].Image}" alt="">
+                        <img src= "${table[i].Image}" alt="">
                     </div>
 
                     <div class="product-title">

@@ -81,7 +81,7 @@ desserts.addEventListener('click',function(){
 
 const addtocart = document.querySelectorAll('.cart');
 let table = JSON.parse(localStorage.getItem("itemsList"|| []));;
-if(table == null){
+if(table == null) {
     table =[];
 }
 addtocart.forEach((elm)=>{
