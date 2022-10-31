@@ -1,29 +1,13 @@
-var removeCartItemButton = document.getElementsByClassName('delete-button')
-console.log(removeCartItemButton)
+// <--------------add-product-start-------------->
 
-for (var i=0;i<removeCartItemButton.length;i++){
-    var button=removeCartItemButton[i]
-    button.addEventListener('click',function(){
-        var buttonClicked = event.target
-        buttonClicked.parentElement.parentElement.parentElement.parentElement.remove()
-        // updateCartTotal()
-    })
-}
-
-
-
-
-const title = localStorage.getItem('title');
-const price = localStorage.getItem('price');
-const imgsrcfinal = localStorage.getItem('imgsrcfinal');
-
-const addedItem[] = localStorage.getItem('itemsList');
-const addedItem = JSON.parse(localStorage.getItem('itemsList'));
+var table = JSON.parse(localStorage.getItem("itemsList"||[]));
+//console.log(table)
 
 var cartRow = document.getElementById('cart-items');
-
+//console.log(cartRow);
 const cartRowContents = document.createElement('div')
- for(let i=0,i<addedItem.length,i++)
+
+for( var i=0;i<table.length;i++){
 
     cartRowContents.innerHTML += `
     <div class="shoping-cart-container">
@@ -31,18 +15,18 @@ const cartRowContents = document.createElement('div')
                 <div class="product">
 
                     <div class="product-image">
-                        <img src="${imgsrcfinal}" alt="">
+                        <img src="${table[i].Image}" alt="">
                     </div>
 
                     <div class="product-title">
-                    <p>${title}</p>
+                    <p>${table[i].Title}</p>
                     </div>
 
                 </div>
 
                 <div class="right-side">
                     <div class="unit-price">
-                        <p class="item-price">${price}</p>
+                        <p class="item-price">${table[i].Price}</p>
                     </div>
 
                     <div class="quantity">
@@ -71,31 +55,81 @@ const cartRowContents = document.createElement('div')
             </div>
             <hr>
         </div>`
-
     
-        //cartRow.inerHTML=cartRowContents   ;
-       // cartRow.appendChild(cartRowContents);
-        
-        
   cartRow.appendChild(cartRowContents);
 
+}
 
-  
+// <--------------add-product-end-------------->
 
-  var removeCartItemButton = document.getElementsByClassName('delete-button')
-console.log(removeCartItemButton)
 
-for (var i=0;i<removeCartItemButton.length;i++){
+
+
+// <-----------delete-object-start-------------->
+
+   var removeCartItemButton = document.getElementsByClassName('delete-button')
+
+for (var i=0;i<removeCartItemButton.length;i++){    
     var button=removeCartItemButton[i]
     button.addEventListener('click',function(){
         var buttonClicked = event.target
-        buttonClicked.parentElement.parentElement.parentElement.parentElement.remove()
+        buttonClicked.parentElement.parentElement.parentElement.parentElement.remove();
+
+        let butonindex = buttonClicked.indexOf(i)
+
+        var table = JSON.parse(localStorage.getItem("itemsList"||[]));
+        console.log(i,butonindex )
+
+
+    
+        
         // updateCartTotal()
     })
 }
 
+// <--------------delete object end---------------->
 
-   //document.getElementById('cart-items').appendChild(cartRowContents);
+
+
+
+
+// <---------------total-price-start--------------->
+let total = 0;  
+
+ const addtocart = document.querySelectorAll('.item-price');
+
+for (var i=0;i<addtocart.length;i++){
+    
+    const price = document.querySelectorAll('.item-price');
+    for(var i=0; i<price.length;i++){
+      const realPrice = [];
+      realPrice[i]= price[i].toString().replace("$","");
+      //console.log(realPrice)
+    }
+    
+    // const price1 = price.replace("$","");
+    // console.log(price1[i].innerHTML)
+    //console.log(realPrice)
+
+
+    // const price = div.querySelector('p').innerHTML;
+    // console.log(price)
+    //var button=removeCartItemButton[i]
+    //button.addEventListener('click',function(){
+       // var buttonClicked = event.target
+    
+        
+        // updateCartTotal()
+    }
+//}
+
+
+
+// <---------------total-price-end----------------->
+
+
+
+
 
 
 
@@ -168,4 +202,4 @@ for (var i=0;i<removeCartItemButton.length;i++){
 //         var ItemQuantity = Item.getElementsByClassName('shoping-cart-container').getElementsByClassName('product-container').getElementsByClassName('item-quantity')[0]
 //         console.log(ItemPrice , ItemQuantity)
 //     }
-// }
+// }    

@@ -77,14 +77,15 @@ desserts.addEventListener('click',function(){
 })
 
 
-
+// JSON.parse(localStorage.getItem("itemsList"|| []));
 
 const addtocart = document.querySelectorAll('.cart');
-var i=0;
-let table = [];
+let table = JSON.parse(localStorage.getItem("itemsList"|| []));;
+if(table == null){
+    table =[];
+}
 addtocart.forEach((elm)=>{
     elm.addEventListener('click',()=>{
-        var Title ,Price ,Image;
         const div = elm.parentElement.parentElement;
         const titre = div.querySelector('h3').innerHTML;
         const prix =  div.querySelector('section').innerHTML;
@@ -98,26 +99,17 @@ addtocart.forEach((elm)=>{
         }
 
 
-        // if (localStorage.getItem('itemsList'==null){
-        //     localStorage.setItem('itemsList', '[]');
-        // }
-
-
 
         table.push(itemsList)
-        localStorage.setItem("itemsList", JSON.stringify(itemsList));
+        localStorage.setItem("itemsList", JSON.stringify(table));
+        console.log(itemsList)  ;
 
-        console.log(table);
-        // localStorage.setItem("title", titre);
-        // localStorage.setItem("price", prix);
-        // localStorage.setItem("imgsrcfinal",imgsrcfinal);
-
-        
         // add_product();
         
         
 
     })
+    
 })
 
 
