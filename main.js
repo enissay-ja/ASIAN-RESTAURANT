@@ -84,7 +84,7 @@ let table = JSON.parse(localStorage.getItem("itemsList"|| []));;
 if(table == null) {
     table =[];
 }
-addtocart.forEach((elm)=>{
+addtocart.forEach((elm,i)=>{
     elm.addEventListener('click',()=>{
         const div = elm.parentElement.parentElement;
         const titre = div.querySelector('h3').innerHTML;
@@ -96,6 +96,7 @@ addtocart.forEach((elm)=>{
             Title: titre,
             Price: prix,
             Image: imgsrcfinal,
+            index:i
         }
 
 

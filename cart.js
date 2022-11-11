@@ -45,10 +45,10 @@ for( var i=0;i<table.length;i++){
 
 
                     <div class="price">
-                        <p>$ 1.6</p>
+                        <p>${table[i].Price}</p>
                     </div>
                     <div class="delete delete-button">
-                        <img src="./Source/image/cart/trash.png" alt="">
+                        <img  src="./Source/image/cart/trash.png" alt="" data-id="${table[i].index}">
                     </div>
                 </div>
 
@@ -57,6 +57,7 @@ for( var i=0;i<table.length;i++){
         </div>`
     
   cartRow.appendChild(cartRowContents);
+  updateCartTotal()
 
 }
 
@@ -71,19 +72,20 @@ for( var i=0;i<table.length;i++){
 
 for (var i=0;i<removeCartItemButton.length;i++){    
     var button=removeCartItemButton[i]
-    button.addEventListener('click',function(){
+    
+    button.addEventListener('click',function(e){
         var buttonClicked = event.target
+        let index = e.target.dataset.id;
         buttonClicked.parentElement.parentElement.parentElement.parentElement.remove();
 
-        let butonindex = buttonClicked.indexOf(i)
-
-        var table = JSON.parse(localStorage.getItem("itemsList"||[]));
-        console.log(i,butonindex )
-
-
-    
+        table.forEach((e,i) => {
+            if(e.index==index){
+                table.splice(i,1);
+            }
+        });
+        localStorage.setItem("itemsList", JSON.stringify(table));
         
-        // updateCartTotal()
+        updateCartTotal()
     })
 }
 
@@ -94,35 +96,18 @@ for (var i=0;i<removeCartItemButton.length;i++){
 
 
 // <---------------total-price-start--------------->
-let total = 0;  
-
- const addtocart = document.querySelectorAll('.item-price');
-
-for (var i=0;i<addtocart.length;i++){
-    
+function updateCartTotal() {
+let total = 0;      
     const price = document.querySelectorAll('.item-price');
     for(var i=0; i<price.length;i++){
       const realPrice = [];
-      realPrice[i]= price[i].toString().replace("$","");
-      //console.log(realPrice)
+      realPrice[i]= table[i].Price.toString().replace("$","");
+      total= total+ Number(realPrice[i]);
+      console.log(realPrice[i]);
     }
-    
-    // const price1 = price.replace("$","");
-    // console.log(price1[i].innerHTML)
-    //console.log(realPrice)
-
-
-    // const price = div.querySelector('p').innerHTML;
-    // console.log(price)
-    //var button=removeCartItemButton[i]
-    //button.addEventListener('click',function(){
-       // var buttonClicked = event.target
-    
-        
-        // updateCartTotal()
-    }
-//}
-
+    document.getElementById("total-price").innerHTML = total;
+    console.log(total);
+}
 
 
 // <---------------total-price-end----------------->
