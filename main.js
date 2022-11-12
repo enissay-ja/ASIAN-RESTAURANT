@@ -77,33 +77,63 @@ desserts.addEventListener('click',function(){
 })
 
 
-// JSON.parse(localStorage.getItem("itemsList"|| []));
 
 const addtocart = document.querySelectorAll('.cart');
 let table = JSON.parse(localStorage.getItem("itemsList"|| []));;
 if(table == null) {
     table =[];
 }
-addtocart.forEach((elm,i)=>{
+addtocart.forEach((elm,i) => {
+    
     elm.addEventListener('click',()=>{
         const div = elm.parentElement.parentElement;
         const titre = div.querySelector('h3').innerHTML;
         const prix =  div.querySelector('section').innerHTML;
         const imgsrc = div.querySelector('img').currentSrc;
-        const imgsrcfinal = imgsrc.replace("http://127.0.0.1:5500",".")
+        const imgsrcfinal = imgsrc.replace("http://127.0.0.1:5500",".");
+        const index = i;
+        
 
         let itemsList = {
             Title: titre,
             Price: prix,
             Image: imgsrcfinal,
-            index:i
+            index:i,
+            quantity: 1
         }
-
-
+        // table[i].quantity +=  1 ;
+        
 
         table.push(itemsList)
         localStorage.setItem("itemsList", JSON.stringify(table));
-        console.log(itemsList)  ;
+
+
+        // totalquantity = 0;
+        // var quantity =table[i].quantity.toString();
+        // totalquantity=totalquantity+Number(quantity++); 
+        // table[i].quantity= table[i].quantity+totalquantity;
+        // localStorage.setItem("itemsList", JSON.stringify(table)); 
+        // console.log(totalquantity)
+
+        // for(let i = 0; i < table.length; i++){
+        //     // console.log(i);
+        //     // console.log("pause");
+        //     // console.log(table[i].index);
+        //     if(table[i].index === index){
+        //          table[i].quantity +=  1 ;
+        //     }
+        //     else
+        //     {
+        //         table.push(itemsList)
+        //          localStorage.setItem("itemsList", JSON.stringify(table));
+        //     }
+        // }
+        
+
+
+
+
+        
 
         // add_product();
         

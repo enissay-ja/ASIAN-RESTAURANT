@@ -31,13 +31,13 @@ for( var i=0;i<table.length;i++){
 
                     <div class="quantity">
                     <div class="quantity-box">
-                            <div class="quantity-button">
+                            <div class="minus-button">
                                 <button>-</button>
                             </div>
 
-                            <p>1</p>
+                            <span id="numberPlace">1</span>
 
-                            <div class="quantity-button">
+                            <div class="plus-button">
                                 <button>+</button>
                             </div>
                     </div>
@@ -70,24 +70,24 @@ for( var i=0;i<table.length;i++){
 
    var removeCartItemButton = document.getElementsByClassName('delete-button')
 
-for (var i=0;i<removeCartItemButton.length;i++){    
-    var button=removeCartItemButton[i]
-    
-    button.addEventListener('click',function(e){
-        var buttonClicked = event.target
-        let index = e.target.dataset.id;
-        buttonClicked.parentElement.parentElement.parentElement.parentElement.remove();
-
-        table.forEach((e,i) => {
-            if(e.index==index){
-                table.splice(i,1);
-            }
-        });
-        localStorage.setItem("itemsList", JSON.stringify(table));
+    for (var i=0;i<removeCartItemButton.length;i++){    
+        var button=removeCartItemButton[i]
         
-        updateCartTotal()
-    })
-}
+        button.addEventListener('click',function(e){
+            var buttonClicked = event.target
+            let index = e.target.dataset.id;
+            buttonClicked.parentElement.parentElement.parentElement.parentElement.remove();
+
+            table.forEach((e,i) => {
+                if(e.index==index){
+                    table.splice(i,1);
+                }
+            });
+            localStorage.setItem("itemsList", JSON.stringify(table));
+            
+            updateCartTotal()
+        })
+    }
 
 // <--------------delete object end---------------->
 
@@ -103,14 +103,47 @@ let total = 0;
       const realPrice = [];
       realPrice[i]= table[i].Price.toString().replace("$","");
       total= total+ Number(realPrice[i]);
-      console.log(realPrice[i]);
+    //   console.log(realPrice[i]);
     }
     document.getElementById("total-price").innerHTML = total;
-    console.log(total);
+    // console.log(total);
 }
 
 
 // <---------------total-price-end----------------->
+
+
+
+
+
+// <-----------Button-Quantity-start-------------->
+
+ MinusButton = document.getElementsByClassName('minus-button')
+console.log(MinusButton.length)
+var number=10
+
+
+for (var i=0;i<MinusButton.length;i++){  
+    
+    MinusButton[i].addEventListener('click',() =>{
+        // // currentQuantity = MinusButton[i].parentElement.querySelector('span').textContent;
+        // console.log(currentQuantity)
+        number= number-1
+        numberPlace.innerText = number ;    
+        console.log(number)
+
+        // table.forEach((e,i) => {
+        //     if(e.index==index){
+        //         table.splice(i,1);
+        //     }
+        // });
+        // localStorage.setItem("itemsList", JSON.stringify(table));
+        
+        //updateCartTotal()
+    })
+}
+
+// <--------------Button-Quantity-start-------------->
 
 
 

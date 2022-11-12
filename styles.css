@@ -420,12 +420,12 @@ body {
     color: #000;
    }
 
-   .quantity-button{
+   .minus-button ,.plus-button{
     padding-left: 5%;
     padding-right: 5%;
    }
   
-   .quantity-button button {
+   .minus-button button ,.plus-button button {
     background: none;
     border: none;
     color: #33A0FF;
