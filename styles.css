@@ -483,7 +483,6 @@ body {
 }
 .formulaire{
  align-items: center;
-  
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -497,9 +496,9 @@ body {
 }
 .formulaire input ,.formulaire textarea,.formulaire button{
   width: 60%;
-  margin-top: 12px;
+  margin-top: 3%;
   background-color: white;
-  padding: 5px;
+  padding: 1%;
   border: none;
   border-radius: 10px;
   outline: none;
@@ -511,6 +510,7 @@ body {
   border: none;
   border-radius: 10px;
 }
+
 .map{
   text-align: center;
   width: 50%;
