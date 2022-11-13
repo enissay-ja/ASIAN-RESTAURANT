@@ -88,10 +88,14 @@ addtocart.forEach((elm,i) => {
     elm.addEventListener('click',()=>{
         const div = elm.parentElement.parentElement;
         const titre = div.querySelector('h3').innerHTML;
-        const prix =  div.querySelector('section').innerHTML;
+        // const prix =  parseFloat(div.querySelector('section').innerHTML);
+        prix =  div.querySelector('section').innerHTML;
+        prixcleared = prix.toString().replace("$","");
+
         const imgsrc = div.querySelector('img').currentSrc;
         const imgsrcfinal = imgsrc.replace("http://127.0.0.1:5500",".");
         const index = i;
+        const quantity=1;
         
 
         let itemsList = {
@@ -99,46 +103,28 @@ addtocart.forEach((elm,i) => {
             Price: prix,
             Image: imgsrcfinal,
             index:i,
-            quantity: 1
+            quantity: quantity,
+            itemsprice: parseFloat(prixcleared)*quantity
         }
-        // table[i].quantity +=  1 ;
-        
 
-        table.push(itemsList)
+
+        let exists = 0
+        table.forEach((item)=>{
+            if(item.index==i){
+                exists = 1
+                item.quantity++;
+                item.itemsprice = item.quantity* parseFloat(prixcleared)
+                
+            }
+            
+        })
+        if (!exists) {
+            table.push(itemsList)
+            
+        }
         localStorage.setItem("itemsList", JSON.stringify(table));
-
-
-        // totalquantity = 0;
-        // var quantity =table[i].quantity.toString();
-        // totalquantity=totalquantity+Number(quantity++); 
-        // table[i].quantity= table[i].quantity+totalquantity;
-        // localStorage.setItem("itemsList", JSON.stringify(table)); 
-        // console.log(totalquantity)
-
-        // for(let i = 0; i < table.length; i++){
-        //     // console.log(i);
-        //     // console.log("pause");
-        //     // console.log(table[i].index);
-        //     if(table[i].index === index){
-        //          table[i].quantity +=  1 ;
-        //     }
-        //     else
-        //     {
-        //         table.push(itemsList)
-        //          localStorage.setItem("itemsList", JSON.stringify(table));
-        //     }
-        // }
-        
-
-
-
-
-        
-
-        // add_product();
-        
-        
-
+    
+    
     })
     
 })
