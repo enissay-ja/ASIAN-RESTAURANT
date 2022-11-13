@@ -545,8 +545,7 @@ body {
 
 
 @media (max-width : 550px){
- ont-size: 16;
-  }
+
   .toggle-button{
     display: flex;
   }
@@ -615,6 +614,9 @@ body {
   .map{
     width: 100%;
   }
+  .formulaire input ,.formulaire textarea,.formulaire button{
+    width: 80%;
+  } 
 
   
 }
