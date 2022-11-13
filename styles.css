@@ -605,7 +605,8 @@ body {
   }
 
   .contact-container{
-    display: flex;
+    margin-top: 0%;
+    margin-bottom: 0px;
     flex-direction: column;
   }
   .formulaire{
