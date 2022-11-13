@@ -603,5 +603,17 @@ body {
   .menu-category-cta-contain {
     width: 95%;
   }
+
+  .contact-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .formulaire{
+    width: 100%;
+  }
+  .map{
+    width: 100%;
+  }
+
   
 }
